@@ -23,7 +23,6 @@ This honeyport uses an iptables block rule that, when triggered, will automatica
         echo "-- $IP has been blocked!" | tee -a /var/log/honeyport.log
    done
    ```
-
 <br>
 
 2. Navigate to honeyport directory
@@ -42,14 +41,27 @@ chmod + x honeyport.sh
 ```
 ./honeyport.sh
 ```
+![run script](https://github.com/trixiahorner/honeyport/blob/main/images/honey4.png?raw=true)
 <br>
 
 5. Now let's see if the honeyport triggers. Remember, we need to make a full connection, so run netcat and disconnect
 ```
 nc 127.0.0.1 1025
 ```
+![run nc](https://github.com/trixiahorner/honeyport/blob/main/images/honey2.png?raw=true)
 <br>
+
 6. The terminal shows that the IP has been blocked
+
+![IP blocked](https://github.com/trixiahorner/honeyport/blob/main/images/honey3.png?raw=true)
 <br>
-<br>
+
 7. Nmap run before and after the connection shows the port was OPEN and then FILTERED once it was triggered
+
+![nmap](https://github.com/trixiahorner/honeyport/blob/main/images/honey5.png?raw=true)
+<br>
+
+## Conclusion
+It's important to think about the impact that a simple iptables block rule can have on IDS. Scans can be very costly.
+When scans come in, they generate logs, they generate alerts, they generate a significant amount of information that must get stored. 
+Cleaning up IDS traffic in this manner means less traffic that's hitting your firewall. This makes your detection more efficient.
