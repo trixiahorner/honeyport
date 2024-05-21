@@ -65,3 +65,6 @@ nc 127.0.0.1 1025
 It's important to think about the impact that a simple iptables block rule can have on IDS. Scans can be very costly.
 When scans come in, they generate logs, they generate alerts, they generate a significant amount of information that must get stored. 
 Think of this as more than just a honeyport script that will deny access to a specific attacker. Cleaning up IDS traffic in this manner means less traffic that's hitting your firewall. This makes your detection more efficient.
+<br>
+<br>
+### *(if you are looking for more cyber deception labs, check out Antisyphon Training's Active Defense and Cyber Deception course)*
