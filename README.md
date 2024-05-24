@@ -44,7 +44,7 @@ chmod + x honeyport.sh
 ![run script](https://github.com/trixiahorner/honeyport/blob/main/images/honey4.png?raw=true)
 <br>
 
-5. Now let's see if the honeyport triggers. Remember, we need to make a full connection, so run netcat and disconnect
+5. Now let's see if the honeyport triggers. Remember, it need to make a full connection, so run netcat and disconnect
 ```
 nc 127.0.0.1 1025
 ```
